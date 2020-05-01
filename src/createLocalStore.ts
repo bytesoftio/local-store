@@ -1,12 +1,11 @@
-import { createStore, HookStore } from "@bytesoftio/use-store"
 import { CreateLocalStore } from "./types"
-import { readLocalStorage } from "./readLocalStorage"
-import { writeLocalStorage } from "./writeLocalStorage"
+import { readLocalStorage, writeLocalStorage } from "@bytesoftio/helpers-local-storage"
+import { createStore, ObservableStore } from "@bytesoftio/store"
 
-const cache: Record<string, HookStore<any>> = {}
+const cache: Record<string, ObservableStore<any>> = {}
 
 export const createLocalStore: CreateLocalStore = <S extends object>(storageKey, initialState) => {
-  let store = cache[storageKey] as HookStore<S>
+  let store = cache[storageKey] as ObservableStore<S>
 
   if ( ! store) {
     store = createStore(readLocalStorage(storageKey, initialState))

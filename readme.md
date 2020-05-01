@@ -1,8 +1,8 @@
-# @bytesoftio/use-local-store
+# @bytesoftio/local-store
 
 ## Installation
 
-`yarn add @bytesoftio/use-local-store` or `npm install @bytesoftio/use-local-store`
+`yarn add @bytesoftio/local-store` or `npm install @bytesoftio/local-store`
 
 ## Table of contents
 
@@ -11,26 +11,21 @@
 
 
 - [Description](#description)
-- [Usage](#usage)
-  - [createLocalStore](#createlocalstore)
+- [createLocalStore](#createlocalstore)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Description
 
-This package is built on top of `@bytesoftio/use-store` and provides an integration with localStorage. This way your
-application state can survive page reloads, etc. Check out the docs of the other package to find a more in depth guide.
+This library is built on top of the [@bytesoftio/use-store](https://github.com/bytesoftio/use-store) package and provides an integration with `localStorage`. This way your application state can survive page reloads, etc. Check out the docs of the other package to find a more in depth guide.
 
-## Usage
+## createLocalStore
 
-### createLocalStore
-
-Since `@bytesoftio/use-store` is used underneath, stores produced by this and the other package are interchangeable. 
-A store created by `createLocalStore` can be used with `useStore` from the other package.
+Since [@bytesoftio/use-store](https://github.com/bytesoftio/use-store) is used underneath, stores produced by this and the other package are interchangeable. A store created by `createLocalStore` can be used with `useStore` function from the other package.
 
 ```tsx
 import React from "react"
-import { createLocalStore } from "@bytesoftio/use-local-store"
+import { createLocalStore } from "@bytesoftio/local-store"
 import { useStore } from "@bytesoftio/use-store"
 
 // state shared between components and services, cached in localStorage

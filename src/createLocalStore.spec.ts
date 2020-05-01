@@ -1,5 +1,5 @@
-import { Store } from "@bytesoftio/use-store"
 import { createLocalStore } from "./createLocalStore"
+import { Store } from "@bytesoftio/store"
 
 describe("createLocalStore", () => {
   it("creates a hook store attached to local storage", () => {

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>@bytesoftio/use-local-store | @bytesoftio/use-local-store</title>
+	<title>@bytesoftio/local-store | @bytesoftio/local-store</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
@@ -2335,7 +2335,7 @@ img {
 		<div class="container">
 			<div class="table-wrap">
 				<div class="table-cell">
-					<strong><a href="index.html">@bytesoftio/use-local-store</a></strong>
+					<strong><a href="index.html">@bytesoftio/local-store</a></strong>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -2371,24 +2371,18 @@ img {
 		<li class=" tsd-kind-function tsd-has-type-parameter">
 			<a href="globals.html#createlocalstore" class="tsd-kind-icon">create<wbr>Local<wbr>Store</a>
 		</li>
-		<li class=" tsd-kind-function tsd-has-type-parameter">
-			<a href="globals.html#readlocalstorage" class="tsd-kind-icon">read<wbr>Local<wbr>Storage</a>
-		</li>
-		<li class=" tsd-kind-function">
-			<a href="globals.html#writelocalstorage" class="tsd-kind-icon">write<wbr>Local<wbr>Storage</a>
-		</li>
 	</ul>
 </nav>
 <div class="container container-main">
 	<div class="content-wrap">
 		<div class="tsd-panel tsd-typography">
-			<a href="#bytesoftiouse-local-store" id="bytesoftiouse-local-store" style="color: inherit; text-decoration: none;">
-				<h1>@bytesoftio/use-local-store</h1>
+			<a href="#bytesoftiolocal-store" id="bytesoftiolocal-store" style="color: inherit; text-decoration: none;">
+				<h1>@bytesoftio/local-store</h1>
 			</a>
 			<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
 				<h2>Installation</h2>
 			</a>
-			<p><code>yarn add @bytesoftio/use-local-store</code> or <code>npm install @bytesoftio/use-local-store</code></p>
+			<p><code>yarn add @bytesoftio/local-store</code> or <code>npm install @bytesoftio/local-store</code></p>
 			<a href="#table-of-contents" id="table-of-contents" style="color: inherit; text-decoration: none;">
 				<h2>Table of contents</h2>
 			</a>
@@ -2396,27 +2390,19 @@ img {
 			<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 			<ul>
 				<li><a href="#description">Description</a></li>
-				<li><a href="#usage">Usage</a><ul>
-						<li><a href="#createlocalstore">createLocalStore</a></li>
-					</ul>
-				</li>
+				<li><a href="#createlocalstore">createLocalStore</a></li>
 			</ul>
 			<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 			<a href="#description" id="description" style="color: inherit; text-decoration: none;">
 				<h2>Description</h2>
 			</a>
-			<p>This package is built on top of <code>@bytesoftio/use-store</code> and provides an integration with localStorage. This way your
-			application state can survive page reloads, etc. Check out the docs of the other package to find a more in depth guide.</p>
-			<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
-				<h2>Usage</h2>
-			</a>
+			<p>This library is built on top of the <a href="https://github.com/bytesoftio/use-store">@bytesoftio/use-store</a> package and provides an integration with <code>localStorage</code>. This way your application state can survive page reloads, etc. Check out the docs of the other package to find a more in depth guide.</p>
 			<a href="#createlocalstore" id="createlocalstore" style="color: inherit; text-decoration: none;">
-				<h3>createLocalStore</h3>
+				<h2>createLocalStore</h2>
 			</a>
-			<p>Since <code>@bytesoftio/use-store</code> is used underneath, stores produced by this and the other package are interchangeable.
-			A store created by <code>createLocalStore</code> can be used with <code>useStore</code> from the other package.</p>
+			<p>Since <a href="https://github.com/bytesoftio/use-store">@bytesoftio/use-store</a> is used underneath, stores produced by this and the other package are interchangeable. A store created by <code>createLocalStore</code> can be used with <code>useStore</code> function from the other package.</p>
 			<pre><code class="language-tsx">import React from &quot;react&quot;
-import { createLocalStore } from &quot;@bytesoftio/use-local-store&quot;
+import { createLocalStore } from &quot;@bytesoftio/local-store&quot;
 import { useStore } from &quot;@bytesoftio/use-store&quot;
 
 // state shared between components and services, cached in localStorage
@@ -2452,8 +2438,6 @@ const Component = () =&gt; {
 						<h3>Functions</h3>
 						<ul class="tsd-index-list">
 							<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#createlocalstore" class="tsd-kind-icon">create<wbr>Local<wbr>Store</a></li>
-							<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#readlocalstorage" class="tsd-kind-icon">read<wbr>Local<wbr>Storage</a></li>
-							<li class="tsd-kind-function"><a href="globals.html#writelocalstorage" class="tsd-kind-icon">write<wbr>Local<wbr>Storage</a></li>
 						</ul>
 					</section>
 				</div>
@@ -2464,10 +2448,10 @@ const Component = () =&gt; {
 			<section class="tsd-panel tsd-member tsd-kind-type-alias">
 				<a name="createlocalstore" class="tsd-anchor"></a>
 				<h3>Create<wbr>Local<wbr>Store</h3>
-				<div class="tsd-signature tsd-kind-icon">Create<wbr>Local<wbr>Store<span class="tsd-signature-symbol">:</span> &lt;S&gt;<span class="tsd-signature-symbol">(</span>storageKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, initialState<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">HookStore</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">&gt;</span></div>
+				<div class="tsd-signature tsd-kind-icon">Create<wbr>Local<wbr>Store<span class="tsd-signature-symbol">:</span> &lt;S&gt;<span class="tsd-signature-symbol">(</span>storageKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, initialState<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">ObservableStore</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in types.ts:3</li>
+						<li>Defined in <a href="https://github.com/bytesoftio/local-store/blob/a4b5186/src/types.ts#L3">types.ts:3</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -2475,7 +2459,7 @@ const Component = () =&gt; {
 					<ul class="tsd-parameters">
 						<li class="tsd-parameter-signature">
 							<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-has-type-parameter">
-								<li class="tsd-signature tsd-kind-icon">&lt;S&gt;<span class="tsd-signature-symbol">(</span>storageKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, initialState<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">HookStore</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">&gt;</span></li>
+								<li class="tsd-signature tsd-kind-icon">&lt;S&gt;<span class="tsd-signature-symbol">(</span>storageKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, initialState<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ObservableStore</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">&gt;</span></li>
 							</ul>
 							<ul class="tsd-descriptions">
 								<li class="tsd-description">
@@ -2494,7 +2478,7 @@ const Component = () =&gt; {
 											<h5>initialState: <span class="tsd-signature-type">S</span></h5>
 										</li>
 									</ul>
-									<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">HookStore</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">&gt;</span></h4>
+									<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">ObservableStore</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">&gt;</span></h4>
 								</li>
 							</ul>
 						</li>
@@ -2508,13 +2492,13 @@ const Component = () =&gt; {
 				<a name="createlocalstore" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagConst">Const</span> create<wbr>Local<wbr>Store</h3>
 				<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
-					<li class="tsd-signature tsd-kind-icon">create<wbr>Local<wbr>Store&lt;S&gt;<span class="tsd-signature-symbol">(</span>storageKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, initialState<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">HookStore</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">&gt;</span></li>
+					<li class="tsd-signature tsd-kind-icon">create<wbr>Local<wbr>Store&lt;S&gt;<span class="tsd-signature-symbol">(</span>storageKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, initialState<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ObservableStore</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">&gt;</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in createLocalStore.ts:8</li>
+								<li>Defined in <a href="https://github.com/bytesoftio/local-store/blob/a4b5186/src/createLocalStore.ts#L7">createLocalStore.ts:7</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -2532,65 +2516,7 @@ const Component = () =&gt; {
 								<h5>initialState: <span class="tsd-signature-type">any</span></h5>
 							</li>
 						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">HookStore</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">&gt;</span></h4>
-					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
-				<a name="readlocalstorage" class="tsd-anchor"></a>
-				<h3><span class="tsd-flag ts-flagConst">Const</span> read<wbr>Local<wbr>Storage</h3>
-				<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
-					<li class="tsd-signature tsd-kind-icon">read<wbr>Local<wbr>Storage&lt;S&gt;<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, defaultValue<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">S</span></li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in readLocalStorage.ts:1</li>
-							</ul>
-						</aside>
-						<h4 class="tsd-type-parameters-title">Type parameters</h4>
-						<ul class="tsd-type-parameters">
-							<li>
-								<h4>S</h4>
-							</li>
-						</ul>
-						<h4 class="tsd-parameters-title">Parameters</h4>
-						<ul class="tsd-parameters">
-							<li>
-								<h5>key: <span class="tsd-signature-type">string</span></h5>
-							</li>
-							<li>
-								<h5>defaultValue: <span class="tsd-signature-type">S</span></h5>
-							</li>
-						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">S</span></h4>
-					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-function">
-				<a name="writelocalstorage" class="tsd-anchor"></a>
-				<h3><span class="tsd-flag ts-flagConst">Const</span> write<wbr>Local<wbr>Storage</h3>
-				<ul class="tsd-signatures tsd-kind-function">
-					<li class="tsd-signature tsd-kind-icon">write<wbr>Local<wbr>Storage<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in writeLocalStorage.ts:1</li>
-							</ul>
-						</aside>
-						<h4 class="tsd-parameters-title">Parameters</h4>
-						<ul class="tsd-parameters">
-							<li>
-								<h5>key: <span class="tsd-signature-type">string</span></h5>
-							</li>
-							<li>
-								<h5>value: <span class="tsd-signature-type">any</span></h5>
-							</li>
-						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">ObservableStore</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">&gt;</span></h4>
 					</li>
 				</ul>
 			</section>

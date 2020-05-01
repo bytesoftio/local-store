@@ -1,3 +1,3 @@
-import { HookStore } from "@bytesoftio/use-store"
+import { ObservableStore } from "@bytesoftio/store"
 
-export type CreateLocalStore = <S extends object>(storageKey: string, initialState: S) => HookStore<S>
+export type CreateLocalStore = <S extends object>(storageKey: string, initialState: S) => ObservableStore<S>
