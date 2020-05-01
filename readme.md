@@ -17,11 +17,11 @@
 
 ## Description
 
-This library is built on top of the [@bytesoftio/use-store](https://github.com/bytesoftio/use-store) package and provides an integration with `localStorage`. This way your application state can survive page reloads, etc. Check out the docs of the other package to find a more in depth guide.
+This library is built on top of the [@bytesoftio/store](https://github.com/bytesoftio/store) package and provides an integration with `localStorage`. This way your application state can survive page reloads, etc. Check out the docs of the other package to find a more in depth guide.
 
 ## createLocalStore
 
-Since [@bytesoftio/use-store](https://github.com/bytesoftio/use-store) is used underneath, stores produced by this and the other package are interchangeable. A store created by `createLocalStore` can be used with `useStore` function from the other package.
+Since [@bytesoftio/store](https://github.com/bytesoftio/store) is used underneath, stores produced by this and the other package are interchangeable. A store created by `createLocalStore` can be used with `useStore` function from the [@bytesoftio/use-store](https://github.com/bytesoftio/use-store).
 
 ```tsx
 import React from "react"

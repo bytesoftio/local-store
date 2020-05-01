@@ -2396,11 +2396,11 @@ img {
 			<a href="#description" id="description" style="color: inherit; text-decoration: none;">
 				<h2>Description</h2>
 			</a>
-			<p>This library is built on top of the <a href="https://github.com/bytesoftio/use-store">@bytesoftio/use-store</a> package and provides an integration with <code>localStorage</code>. This way your application state can survive page reloads, etc. Check out the docs of the other package to find a more in depth guide.</p>
+			<p>This library is built on top of the <a href="https://github.com/bytesoftio/store">@bytesoftio/store</a> package and provides an integration with <code>localStorage</code>. This way your application state can survive page reloads, etc. Check out the docs of the other package to find a more in depth guide.</p>
 			<a href="#createlocalstore" id="createlocalstore" style="color: inherit; text-decoration: none;">
 				<h2>createLocalStore</h2>
 			</a>
-			<p>Since <a href="https://github.com/bytesoftio/use-store">@bytesoftio/use-store</a> is used underneath, stores produced by this and the other package are interchangeable. A store created by <code>createLocalStore</code> can be used with <code>useStore</code> function from the other package.</p>
+			<p>Since <a href="https://github.com/bytesoftio/store">@bytesoftio/store</a> is used underneath, stores produced by this and the other package are interchangeable. A store created by <code>createLocalStore</code> can be used with <code>useStore</code> function from the <a href="https://github.com/bytesoftio/use-store">@bytesoftio/use-store</a>.</p>
 			<pre><code class="language-tsx">import React from &quot;react&quot;
 import { createLocalStore } from &quot;@bytesoftio/local-store&quot;
 import { useStore } from &quot;@bytesoftio/use-store&quot;
@@ -2450,7 +2450,7 @@ const Component = () =&gt; {
 				<div class="tsd-signature tsd-kind-icon">Create<wbr>Local<wbr>Store<span class="tsd-signature-symbol">:</span> &lt;S&gt;<span class="tsd-signature-symbol">(</span>storageKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, initialState<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">ObservableStore</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/bytesoftio/local-store/blob/a4b5186/src/types.ts#L3">types.ts:3</a></li>
+						<li>Defined in <a href="https://github.com/bytesoftio/local-store/blob/d0c074f/src/types.ts#L3">types.ts:3</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -2497,7 +2497,7 @@ const Component = () =&gt; {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/bytesoftio/local-store/blob/a4b5186/src/createLocalStore.ts#L7">createLocalStore.ts:7</a></li>
+								<li>Defined in <a href="https://github.com/bytesoftio/local-store/blob/d0c074f/src/createLocalStore.ts#L7">createLocalStore.ts:7</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
