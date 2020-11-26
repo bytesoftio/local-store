@@ -29,19 +29,19 @@ import { createLocalStore } from "@bytesoftio/local-store"
 import { useStore } from "@bytesoftio/use-store"
 
 // state shared between components and services, cached in localStorage
-const authStore = createLocalStore("auth", { token: "abcde" })
+const sharedAuthStore = createLocalStore("auth", { token: "abcde" })
 
 const Component = () => {
-  const [state, setState, addState, resetState] = useStore(authStore)
+  const authStore = useStore(sharedAuthStore)
   // local component state, created through an initializer function, cached in localStorage
-  const [persistentState, setPersistentState] = useStore(() => createLocalStore("counter", {count: 0}))
+  const counterStore = useStore(() => createLocalStore("counter", {count: 0}))
 
-  const increment = () => setPersistentState({count: persistentState.count + 1})
+  const increment = () => counterStore.set({count: persistentState.count + 1})
 
   return (
     <div>
-      <span>Auth token: {state.token}</span>
-      <button onClick={increment}>{persistentState.count}</button>
+      <span>Auth token: {authStore.get().token}</span>
+      <button onClick={increment}>{counterStore.get().count}</button>
     </div>
   )
 }

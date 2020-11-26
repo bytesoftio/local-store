@@ -1,3 +1,3 @@
 import { ObservableStore } from "@bytesoftio/store"
 
-export type CreateLocalStore = <TState extends object>(storageKey: string, initialState: TState) => ObservableStore<TState>
+export type CreateLocalStore = <TValue extends object>(storageKey: string, initialValue: TValue) => ObservableStore<TValue>

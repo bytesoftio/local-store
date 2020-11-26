@@ -4,12 +4,12 @@ import { createStore, ObservableStore } from "@bytesoftio/store"
 
 const cache: Record<string, ObservableStore<any>> = {}
 
-export const createLocalStore: CreateLocalStore = <TState extends object>(storageKey, initialState) => {
-  let store = cache[storageKey] as ObservableStore<TState>
+export const createLocalStore: CreateLocalStore = <TValue extends object>(storageKey, initialValue) => {
+  let store = cache[storageKey] as ObservableStore<TValue>
 
   if ( ! store) {
-    store = createStore(readLocalStorage(storageKey, initialState))
-    store.listen((state) => writeLocalStorage(storageKey, state))
+    store = createStore(readLocalStorage(storageKey, initialValue))
+    store.listen((newValue) => writeLocalStorage(storageKey, newValue))
     cache[storageKey] = store
   }
 
